@@ -1,0 +1,14 @@
+{
+  "Patterns": {
+    "a.txt": [
+      "a.txt"
+    ],
+    "test": [
+      "test/a.txt"
+    ]
+  },
+  "Files": {
+    "a.txt": "/Users/weixiecui/code/go/gopath/src/github.com/cuiweixie/go_compiler/code/embed/a.txt",
+    "test/a.txt": "/Users/weixiecui/code/go/gopath/src/github.com/cuiweixie/go_compiler/code/embed/test/a.txt"
+  }
+}

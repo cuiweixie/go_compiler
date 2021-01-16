@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 // The playground now uses square brackets for type parameters. Otherwise,
@@ -17,6 +18,14 @@ func Print[T any](s []T) {
 	}
 }
 
+type String [T any] struct {
+    str T
+}
+
+type StringType String[string]
 func main() {
 	Print([]string{"Hello, ", "playground\n"})
+	a := String[string]{str: "abc"}
+	 fmt.Println(reflect.TypeOf(a).Name())
+	fmt.Println(a)
 }

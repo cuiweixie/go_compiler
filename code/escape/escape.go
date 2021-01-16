@@ -1,4 +1,5 @@
 package escape
+
 //
 //var A = 1111
 ////go:noinline
@@ -6,23 +7,22 @@ package escape
 //	return A
 //}
 
-//aaa go:noinline
-//func Foo() func() int {
-//	a := 0
-//	f := func() int {
-//		a++
-//		return a
-//	}
-//	return f
-//}
-func Foo() *int {
-	var a int
-	return &a
+//go:noinline
+func Foo() func () func() int {
+	a := 0
+	f := func() func()int {
+		a++
+		f2 := func() int {
+			a++
+			return a
+		}
+		return f2
+		//return a
+	}
+	return f
 }
-//func main() {
-//	fmt.Println(Foo([]int{1}))
-//	fmt.Println(pack.Minus(2, 1))
-//	fa(10)
+//func Foo() int {
+//	return int(1.0)
 //}
 //
 //

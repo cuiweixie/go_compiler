@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	obj, err := objfile.Open("/Users/weixiecui/code/go/gopath/src/github.com/cuiweixie/go_compiler/main.o" )
+	obj, err := objfile.Open("/Users/weixiecui/code/go/gopath/src/github.com/cuiweixie/go_compiler/test_link.o" )
 	if err != nil {
 		panic(err)
 	}
